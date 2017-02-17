@@ -34,12 +34,6 @@
         default:
           return (tags[item]) ? whenTrue : whenFalse;
       }
-
-      // if (arguments.length === 1) {
-      //   return tags[key];
-      // } else {
-      //   return (tags[key]) ? whenTrue : whenFalse;
-      // }
     }
   }
 
