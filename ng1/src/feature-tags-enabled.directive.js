@@ -1,4 +1,4 @@
-(function() {
+(() => {
 
     angular
       .module('feature.tags')
@@ -16,8 +16,8 @@
       }
 
       function link(scope, elem) {
-        var vm = scope;
-        var hasTag = (vm.featureTagEnabled && vm.featureTagEnabled === 'true');
+        const vm = scope;
+        const hasTag = (vm.featureTagEnabled && vm.featureTagEnabled === 'true');
         elem[0].style.setProperty('display', (hasTag) ? '' : 'none', 'important');
       }
     }

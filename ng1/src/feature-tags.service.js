@@ -1,4 +1,4 @@
-(function() {
+(() => {
 
   angular
     .module('feature.tags')
@@ -7,14 +7,39 @@
   FeatureTagsService.$inject = ['feature_tags'];
 
   function FeatureTagsService(feature_tags) {
-    var tags = Object.assign({ }, feature_tags);
+    const tags = Object.assign({ }, feature_tags);
 
-    return function(key, whenTrue, whenFalse) {
-      if (arguments.length === 1) {
-        return tags[key];
-      } else {
-        return (tags[key]) ? whenTrue : whenFalse;
+    function isObject(value) {
+      return value !== null && typeof value === 'object';
+    }
+
+    function isString(value) {
+      return value !== null && typeof value === 'string';
+    }
+
+    return function(item, whenTrue, whenFalse) {
+      switch (arguments.length) {
+        case 0:
+          return tags;
+        case 1:
+          if (isString(item)) {
+            return tags[item];
+          } else if (isObject(item)) {
+            tags[item.key] = item.state;
+            return item;
+          } else {
+            throw new TypeError('The first argument of FeatureTagsService() must be a string or an object.');
+          }
+        break;
+        default:
+          return (tags[item]) ? whenTrue : whenFalse;
       }
+
+      // if (arguments.length === 1) {
+      //   return tags[key];
+      // } else {
+      //   return (tags[key]) ? whenTrue : whenFalse;
+      // }
     }
   }
 

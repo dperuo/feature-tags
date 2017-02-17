@@ -7,7 +7,19 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'feature-tags.min.js'
   },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new webpack.optimize.UglifyJsPlugin(),
   ]
 };
