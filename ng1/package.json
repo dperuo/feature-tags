@@ -1,8 +1,11 @@
 {
-  "name": "feature-tags-v1",
-  "version": "1.0.0",
+  "name": "feature-tags-ng1",
+  "version": "1.0.2",
   "description": "A feature flag module for use in Angular 1 applications.",
   "main": "index.js",
+  "homepage": "https://github.com/dperuo/feature-tags",
+  "repository": "https://github.com/dperuo/feature-tags",
+  "bugs": "https://github.com/dperuo/feature-tags/issues",
   "scripts": {
     "start": "webpack --config webpack.config.js"
   },
