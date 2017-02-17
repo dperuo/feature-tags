@@ -30,7 +30,6 @@
           } else {
             throw new TypeError('The first argument of FeatureTagsService() must be a string or an object.');
           }
-        break;
         default:
           return (tags[item]) ? whenTrue : whenFalse;
       }
