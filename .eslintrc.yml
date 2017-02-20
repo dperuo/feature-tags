@@ -1,0 +1,17 @@
+---
+root: true
+extends: 'eslint:recommended'
+
+parserOptions:
+    ecmaVersion: 6
+    sourceType: module
+
+globals:
+  __dirname: false
+  angular: false
+  module: false
+  require: false
+
+rules:
+  no-redeclare: 'off'
+  no-unused-vars: 'warn'
