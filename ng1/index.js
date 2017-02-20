@@ -1,1 +1,1 @@
-module.exports = require('./dist/feature-tags.bundle');
+module.exports = require('./dist/feature-tags.min');
