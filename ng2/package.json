@@ -1,0 +1,13 @@
+{
+  "name": "feature-tags-ng2",
+  "version": "0.1.1",
+  "description": "A feature flag (feature toggle) module for Angular 2 applications.",
+  "main": "index.js",
+  "homepage": "https://github.com/dperuo/feature-tags",
+  "repository": "https://github.com/dperuo/feature-tags",
+  "bugs": "https://github.com/dperuo/feature-tags/issues",
+  "scripts": {},
+  "author": "Derek Peruo <derek@derekperuo.net>",
+  "license": "MIT",
+  "devDependencies": {}
+}
