@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/feature-tags-ng1.svg)](https://badge.fury.io/js/feature-tags-ng1)
+
 # feature-tags-ng1
 
 A feature flag (feature toggle) module for Angular 1.
