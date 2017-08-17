@@ -23,6 +23,12 @@ Or using a `require` statement in your JavaScript…
 const FeatureTagsService = require('feature-tags-ng1');
 ```
 
+🎯 **NOTE: Remember to add the `feature.tags` module as a dependency of your app.**
+
+```
+angular.module('app', ['feature.tags']);
+```
+
 ## API
 
 - The `FeatureTagsService` assumes a property called `feature_tags` on the `window` object in global scope.
